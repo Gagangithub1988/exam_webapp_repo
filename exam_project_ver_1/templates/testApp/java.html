@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+{% extends 'testApp/base.html' %}
+{% load static %}
+{% block content_block %}
+<link rel="stylesheet" type="text/css" href="{% static 'login1/fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'login1/fonts/Linearicons-Free-v1.0.0/icon-font.min.css' %}">
+<!--===============================================================================================-->
+<div class="container" align='center'>
+<div class="container" align='center'>
+  <div class="jumbotron bg-dark " >
+    <h3>JAVA QUIZES</h3>
+    <p>Get Certificate by scoring 95%</p>
+    <p>!!!!!!!!!!!All The Best!!!!!!!!!!!</p>
+  </div>
+  <div class="container" align='left'>
+    <form class="" action="" method="post">
+      {% csrf_token %}
+      <div class="">
+        <h4>Q.1 Which of those doesn't have an index based structure?</h4>
+        <ul class="quize">
+          <li><input type="checkbox" name="one" value="">List</li>
+          <li><input type="checkbox" name="one" value="">Set</li>
+          <li><input type="checkbox" name="one" value="">Map</li>
+        </ul>
+        <h4>Q.2 java.util.Collections is a:</h4>
+        <ul class="quize">
+          <li><input type="checkbox" name="one" value="">Class</li>
+          <li><input type="checkbox" name="one" value="">Interface</li>
+          <li><input type="checkbox" name="one" value="">Object</li>
+          <li><input type="checkbox" name="one" value="">Non of the above</li>
+        </ul>
+        <h4>Q.3 Methods such as reverse, shuffle are offered in:</h4>
+        <ul class="quize">
+          <li><input type="checkbox" name="one" value="">Object</li>
+          <li><input type="checkbox" name="one" value="">Collection</li>
+          <li><input type="checkbox" name="one" value="">Collections</li>
+          <li><input type="checkbox" name="one" value="">Apache common collections</li>
+        </ul>
+        <h4>Q.4 Which of those allows duplicate elements?</h4>
+        <ul class="quize">
+          <li><input type="checkbox" name="one" value="">List</li>
+          <li><input type="checkbox" name="one" value="">Set</li>
+          <li><input type="checkbox" name="one" value="">All</li>
+          <li><input type="checkbox" name="one" value="">Non of the above</li>
+        </ul>
+        <h4>Q.5 Which allows the storage of a null key and null values?</h4>
+        <ul class="quize">
+          <li><input type="checkbox" name="one" value="">HashTable</li>
+          <li><input type="checkbox" name="one" value="">HashMap</li>
+          <li><input type="checkbox" name="one" value="">Non of the above</li>
+        </ul>
+        <h4>Q.6 Which interface should be implemented for sorting on basis of many criteria’s?</h4>
+        <ul class="quize">
+          <li><input type="checkbox" name="one" value="">Comparator</li>
+          <li><input type="checkbox" name="one" value="">Comparable</li>
+          <li><input type="checkbox" name="one" value="">Serializer</li>
+          <li><input type="checkbox" name="one" value="">Non of the above</li>
+        </ul>
+        <h4>Q.7 In ConcurrentHashMap - once thread locks one segment for updation it doesn't block it for retrieval hence another thread will scan the same segment, however, it'll be ready to read the data before locking?</h4>
+        <ul class="quize">
+          <li><input type="checkbox" name="one" value="">True</li>
+          <li><input type="checkbox" name="one" value="">False</li>
+        </ul>
+        <h4>Q.8 What guarantees type-safety in a collection?</h4>
+        <ul class="quize">
+          <li><input type="checkbox" name="one" value="">Generics</li>
+          <li><input type="checkbox" name="one" value="">AbstractClass</li>
+          <li><input type="checkbox" name="one" value="">Collection</li>
+          <li><input type="checkbox" name="one" value="">Intefaces</li>
+        </ul>
+        <h4>Q.9 The root interface of Java collection framework hierarchy is -</h4>
+        <ul class="quize">
+          <li><input type="checkbox" name="one" value="">Collection</li>
+          <li><input type="checkbox" name="one" value="">Root</li>
+          <li><input type="checkbox" name="one" value="">Collections</li>
+          <li><input type="checkbox" name="one" value="">List/Set</li>
+        </ul>
+        <h4>Q.10 Which of those is synchronized?</h4>
+        <ul class="quize">
+          <li><input type="checkbox" name="one" value="">ArrayList</li>
+          <li><input type="checkbox" name="one" value="">Vector</li>
+          <li><input type="checkbox" name="one" value="">LinkedList</li>
+          <li><input type="checkbox" name="one" value="">Non of These</li>
+        </ul>
+      </div>
+      <div class="submit" aling='center'>
+        <input type="submit" Class="btn btn-lg btn-warning" name="" value="Submit">
+      </div>
+
+    </form>
+
+  </div>
+</div>
+{% endblock %}

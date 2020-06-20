@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+{% extends 'testApp/base.html' %}
+{% load static %}
+{% block content_block %}
+<link rel="stylesheet" type="text/css" href="{% static 'login1/fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'login1/fonts/Linearicons-Free-v1.0.0/icon-font.min.css' %}">
+<!--===============================================================================================-->
+<div class="container" align='center'>
+  
+      <h6>Profile:</h6>
+      <table class="table table-dark table-bordered table-striped">
+          <tr>
+              <th>First Name</th>
+              <td>{{user.first_name}}</td>
+          </tr>
+            <tr>
+                <th>Last Name</th>
+                <td>{{user.last_name}}</td>
+            </tr>
+
+            <tr>
+                <th>Email</th>
+                <td>{{user.email}}</td>
+            </tr>
+
+            <tr>
+            <th>Contact Number</th>
+            <td>{{user.contact_number}}</td>
+            </tr>
+
+            <tr>
+            <th>Profile Picture</th>
+            {% if user.profile_pic %}
+            <td><img src="{{user.profile_pic.url}}" alt=""></td>
+            {% endif %}
+         </tr>
+
+
+       </table>
+
+
+ 
+</div>
+{% endblock %}

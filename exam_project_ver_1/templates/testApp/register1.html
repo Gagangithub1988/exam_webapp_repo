@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+{% extends 'testApp/base.html' %}
+{% load static %}
+{% block content_block %}
+<div class="container" align='center'>
+  <h1>Register Here..........</h1>
+  <div class="container" >
+
+    <form method="post">
+      {% csrf_token %}
+      
+      <input id="1" type="text" name="first_name" value="" placeholder="First Name"><br>
+      
+      <input type="text" name="last_name" value="" placeholder="Last Name"><br>
+      <input type="text" name="username" value="" placeholder="User Name"><br>
+      <input type="email" name="email" value="" placeholder="Email"><br>
+      <input type="password" name="password1" value="" placeholder="Password"><br>
+      
+      <input id="3" type="password" name="password2" value="" placeholder="Confirm Password"><br>
+      <input type="submit" Class="btn btn-lg btn-warning" name="" value="Submit">
+    </form>
+  </div>
+</div>
+{% endblock %}

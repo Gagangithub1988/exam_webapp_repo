@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+{% extends 'testApp/base.html' %}
+{% load static %}
+{% block content_block %}
+<link rel="stylesheet" type="text/css" href="{% static 'login1/fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'login1/fonts/Linearicons-Free-v1.0.0/icon-font.min.css' %}">
+<!--===============================================================================================-->
+<div class="container" align='center'>
+  
+      <form action="" method='post' enctype="multipart/form-data">
+        {% csrf_token%}
+        <table class="table table-dark table-bordered table-striped">
+            {{form.as_table}}
+            
+        </table><br>
+        <button class="btn btn-warning float-center">Update profile</button>
+        
+        <button class="btn btn-warning float-center"><a href="/password_change/">Change password</a></button>
+
+      </form>
+
+  
+ 
+</div>
+{% endblock %}

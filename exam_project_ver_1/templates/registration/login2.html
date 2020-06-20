@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+{% extends 'testApp/base.html' %}
+{% load static %}
+{% block content_block %}
+<div class="container" align='center'>
+  <form class="" action="" method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit" class="btn btn-lg btn-warning" name="button">Login</button>
+  </form>
+</div>
+{% endblock %}

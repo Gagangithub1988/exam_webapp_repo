@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+{% extends 'testApp/base.html' %}
+{% load static %}
+{% block content_block %}
+<link rel="stylesheet" type="text/css" href="{% static 'login1/fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'login1/fonts/Linearicons-Free-v1.0.0/icon-font.min.css' %}">
+<!--===============================================================================================-->
+<div class="container" align='center'>
+  <div class="jumbotron bg-dark" >
+    <a href="https://www.javatpoint.com/java-tutorial"><img src="{% static 'images/java.png' %}" alt=""></a>
+    <a href="https://www.javatpoint.com/python-tutorial"><img src="{% static 'images/python.jpg' %}" alt=""></a>
+    <a href="https://www.javatpoint.com/sql-tutorial"><img src="{% static 'images/sql.png' %}" alt=""></a>
+  </div>
+  <div class="container" align='left'>
+    <h2>Rules:</h2>
+    <ul>
+      <li>Student appearing for exam who get passing score and applies for certificate can receive their certificate within 10 to 15 working days. Student enrolled for One-year courses, and appeared for First Sem. will receive the only online result,  the certificate will be sent after the second sem. exam.), IFS team will dispatch it within 10-15 working days.</li>
+      <li>If any student fail to apply for certificate then result will not be processed and certificate will not be dispatched. After successful online paper submission, your result will be displayed on the screen. After Finishing the exam, take a screenshot or photograph of result page and apply with below links for result confirmation. </li>
+      <li>Do not appear for exam before or after exam time. Login is for single use only. It will be deactivated automatically after first use.</li>
+      <li>After paper submission, student will receive a copy of your online objective paper along with result. If you do not receive an email, please check your Junk Mail/Spam folder. If you do not receive it within 10 minute, it means your paper is not submitted properly or there is problem in your submission. You may require to re-appear for this paper / exam. In such case contact our support team ASAP. No any complaint or request will be accepted later.</li>
+      <li>All our exam servers and backup server will be active for exam period, if any problem persists: It means there is problem in your computer, setting, Internet. If any student lack in sufficient computer knowledge please consult with your friend or family member who knows about computer and internet.</li>
+      <li>Exam rules are very strict and important part so it must considered with priority and any type of negligence is not acceptable.</li>
+      <li>Many web browsers, anti viruses or system temp files auto delete session files from cookies / cache, it results in session expiry or password expiry, so always backup your answers to avoid any type of data loss because another free attempt will not be provided in such cases.</li>
+      <li>Scheduled / Auto-Scheduled Online exam can not be changed, postponed or extended in any condition.</li>
+    </ul>
+  </div>
+</div>
+{% endblock %}
