@@ -37,6 +37,11 @@
 					<span class="login100-form-title p-b-59">
 						Sign Up
 					</span>
+					<div class="p-r-30 p-t-10 p-b-10 p-l-30">
+						{% for msg in messages %}
+						<p style="color:red">{{msg}}</p>
+						{% endfor %}
+					</div>
 
 					<div class="wrap-input100 validate-input" data-validate="Name is required">
 						<span class="label-input100">Full Name</span>
@@ -71,7 +76,7 @@
 
 					<div class="flex-m w-full p-b-33">
 						<div class="contact100-form-checkbox">
-							<input class="input-checkbox100" id="ckb1" type="checkbox" name="agreement">
+							<input class="input-checkbox100" id="ckb1" type="checkbox" name="agreement" value="term">
 							<label class="label-checkbox100" for="ckb1">
 								<span class="txt1">
 									I agree to the
@@ -98,11 +103,7 @@
 							<i class="fa fa-long-arrow-right m-l-5"></i>
 						</a>
 					</div><br>
-					<div class="p-r-30 p-t-10 p-b-10 p-l-30">
-						{% for msg in messages %}
-						{{msg}}
-						{% endfor %}
-					</div>
+					
 				</form>
 			</div>
 		</div>
