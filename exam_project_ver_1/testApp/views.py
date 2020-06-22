@@ -27,9 +27,8 @@ def register_view(request):
         username=request.POST['username']
         password1=request.POST['password1']
         password2=request.POST['password2']
-        
-        
-        if 'on' in request.POST:
+        agreement=request.POST.get('agreement')
+        if agreement not in ['term']:
             messages.info(request,'Please accept our agreement')
             return redirect('/register')
         else:
