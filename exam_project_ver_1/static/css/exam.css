@@ -5,15 +5,16 @@ body{
   background-image: url('https://images.unsplash.com/photo-1534521296698-8ab27b628bf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1190&q=80');
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 }
 .jumbotron{
   color: white;
   height: 250px;
-  width: 1200px;
+  width: 100%;
 }
 img{
   height: 150px;
-  width: 300px;
+  width: 30%;
   padding: 0 0 0 0;
   border: 20px;
 }
@@ -57,4 +58,55 @@ button{
 }
 @signin-process {
   margin-top: 100px;
+}
+
+ .content{
+      width: 70%;
+      float: left;
+      padding: 0 0 0 30px;
+      height: 100%;
+      color: honeydew;
+      
+  }
+  .sidebar{
+      width: 30%;
+      float: right;
+      padding: 10px;
+      background: white;
+      height: 100%;
+      color: coral;
+  }
+  .sidebar a{
+    color: darkblue;
+}
+  h2{
+      text-align: center;
+      border-bottom:1px solid coral;
+      padding-bottom: 10px;
+  }
+  #date{
+      color: greenyellow;
+      font-style: italic;
+      font-size: 12px;
+  }
+  h4{
+    text-align: center;
+    border-bottom:1px solid coral;
+    padding-bottom: 10px;
+}
+h5{
+  text-align: center;
+  
+  padding-bottom: 10px;
+}
+
+form.td{
+  
+  padding-top: 30px;
+}
+#ch{
+  color: greenyellow;
+  font-style: italic;
+  font-size: 12px;
+  border-bottom: lightsalmon;
 }

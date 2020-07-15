@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/exam.css' %}">
+    <title></title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">ADITYA'S EXAM</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="nav navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="/home/">Home </a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="/java_exam/">Java Exam</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="/python_exam/">Python Exam</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="/sql_exam/">SQL Exam</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="/post_list_view/">Blog</a>
+            </li>
+            <li class="nav-item dropdown active">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Quiz
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="/java_exam/">Java</a>
+                <a class="dropdown-item" href="/python_exam/">Python</a>
+                <a class="dropdown-item" href="/sql_exam/">Sql</a>
+              </div>
+            </li>
+          </ul >
+          <ul class="nav navbar-nav ml-auto">
+            
+            {% if user.is_authenticated %}
+            <li><div class="login100-form-avatar">
+              {% if user.profile_pic %}
+              <img src="{{user.profile_pic.url}}" alt="">
+              {% else %}
+              <img src="{% static 'images/user_boy_blank.jpg' %}" alt="">
+              
+              {% endif %}
+            </div>
+            </li><span>/</span>
+            <li class="user">Hello, {{user.first_name}}</li><span>/</span>
+            <li><a class="user1 fa fa-lock"  href="/logout/"><span> </span>Logout</a></li><span>/</span>
+            <li><a class="user1 fa fa-user" href="/profile_update/"><span> </span>Account</a></li><span>/</span>
+            
+            {% else%}
+            <li><a class="user1 fa fa-users" href="/register/"><span> </span>Register</a></li><span>/</span>
+            <li><a class="user1 fa fa-unlock" href="/sign_view/"><span> </span>Login</a></li><span>/</span>
+            
+            {% endif %}
+            
+          </ul>
+        </div>
+      </nav>
+      <div class="container" align='center'>
+        <h1>Welcome to Gagan's Online Exams</h1>
+      </div>
+      {% block content_block %}
+      {% endblock %}
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>

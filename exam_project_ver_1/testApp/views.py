@@ -41,6 +41,7 @@ def register_view(request):
                     user=Account.objects.create_user(first_name=first_name,username=username,email=email,password=password1)
                     user.save()
                     return redirect('/sign_view')
+                    
 
     return render(request,'testApp/signup.html')
 
@@ -74,3 +75,22 @@ def profile_update_view(request):
     return render(request,'testApp/profile_update.html',{'form':form})
 def profile_view(request):
     return render(request,'testApp/profile.html')
+
+# def password_reset_email_validation_view(request):
+#     if request.method=='POST':
+#         email=request.POST['email']
+#         if Account.objects.filter(email=email).exists():
+#             return redirect('/reset_password')
+#         else:
+#             messages.info(request,'Email ID is not registered')
+#             return render(request,'registration/password_reset.html')
+
+#     return render(request,'registration/password_reset.html')
+
+# class EmailValidationOnForgotPassword(PasswordResetForm):
+#     def clean_email(self):
+#         email = self.cleaned_data['email']
+#         if not User.objects.filter(email__iexact=email, is_active=True).exists():
+#             raise ValidationError("There is no user registered with the specified email address!")
+
+#         return email

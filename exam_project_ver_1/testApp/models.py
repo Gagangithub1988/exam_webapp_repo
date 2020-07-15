@@ -9,7 +9,7 @@ class MyAccountManager(BaseUserManager):
             raise ValueError('User must have an username')
         user=self.model(email=self.normalize_email(email),username=username,first_name=first_name)
         user.set_password(password)
-        user.is_active=False
+        user.is_active=True
         user.save(using=self._db)
         return user
 
@@ -26,7 +26,6 @@ class MyAccountManager(BaseUserManager):
 class Account(AbstractBaseUser):
     email=          models.EmailField(verbose_name='Email Address',max_length=60,unique=True)
     username=       models.CharField(verbose_name='Username',max_length=30,unique=True)
-    
     first_name=     models.CharField(max_length=30)
     last_name=      models.CharField(max_length=30,blank=True)
     contact_number= models.CharField(max_length=30,blank=True)

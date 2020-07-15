@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% extends 'blogApp/base.html' %}
+{% load static %}
+{%block title_block%}{{post.title}}{% endblock %}
+{% block content_block %}
+<link rel="stylesheet" type="text/css" href="{% static 'login1/fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="{% static 'login1/fonts/Linearicons-Free-v1.0.0/icon-font.min.css' %}">
+<!--===============================================================================================-->
+{% if sent%}
+    <h5>Email Successfully sent!!!</h5>
+    <h5>Post with the title:{{post.title}} information shared by email!!!</h5> 
+{% else %}   
+<h4>Share post with the :{{post.title}} by Email!!!</h4>
+    <div class="container" align='center'>
+        <form method="POST" class="td">
+            <table >
+                {{form.as_table}}
+                {% csrf_token %}
+            </table>
+            <input type="submit" class="btn btn-primary btn-lg btn-warning" value="Send Mail">
+        </form>
+    </div>
+{% endif %}
+{% endblock %}
